@@ -66,7 +66,7 @@ For support and installation notes visit http://www.hlxcommunity.com
 								$domain="steamcommunity.com";
 								$indata="";
 						//		$data=file_get_contents($page);
-								$fsock=fsockopen($domain, 80, $errno, $errstr,2);
+								$fsock=fsockopen("ssl://".$domain, 443, $errno, $errstr,2);
 								if(!$fsock)
 								{
 									echo "Error: $errstr";
